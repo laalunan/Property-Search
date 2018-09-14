@@ -139,7 +139,7 @@ public class PropertyDAO {
 		if (frequest6.equals("")) {yearBuilt = "yearBuilt LIKE ";} else {yearBuilt = "yearBuilt = ";}
 		if (frequest8.equals("")) {totalArea = "totalArea LIKE ";} else {totalArea = "totalArea = ";}
 		System.out.println(frequest9);
-		String filter = "SELECT * FROM properties.property WHERE " + type + "? AND sellingPrice >= ? AND sellingPrice <= ? AND "+bedroom+"? AND "+bathroom+" ? AND "+noOfGarage+" ?  AND "+garageSize+" ? AND "+yearBuilt+" ? AND basement = ? AND "+totalArea+" ? AND amenities LIKE ?";
+		String filter = "SELECT * FROM properties.property WHERE " + type + "? AND sellingPrice >= ? OR sellingPrice <= ? AND "+bedroom+"? AND "+bathroom+" ? AND "+noOfGarage+" ?  AND "+garageSize+" ? AND "+yearBuilt+" ? AND basement = ? AND "+totalArea+" ? AND amenities LIKE ?";
 		
 		
 		for (int i=0; i < size-1; i++) {
