@@ -146,7 +146,7 @@ public class PropertyDAO {
 			filter += "AND amenities LIKE ?"; 
 		}
 		
-		filter += " ORDER BY dateTime DESC AND clickCount DESC";
+		filter += " ORDER BY dateTime DESC, clickCount DESC";
 		try {
 			fpstmt = myConn.prepareStatement(filter);
 			if (frequest.equals("Any")) {
