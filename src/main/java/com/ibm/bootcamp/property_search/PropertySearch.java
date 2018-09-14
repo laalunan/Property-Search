@@ -26,5 +26,12 @@ public class PropertySearch {
 	}
 	
 
+	@RequestMapping("/compareProperty")
+	public List<Property> compare(@RequestParam(value = "propertyID") int propertyID, @RequestParam(value = "propertyID2") int propertyID2){
+				
+		
+		return PropertyDAO.compareProperty(propertyID, propertyID2);
+		
+	}
 	
 }
